@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --container-padding: 15px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 960px;
+  --container-xl: 1430px;
+
+  --font-primary: var(--font-cormorant_upright);
+  --font-secondary: var(--font-open_sans);
+
+  --color-primary: #100e0e;
+  --color-secondary: #787f8a;
+  --color-accent: #c7a17a;
+  --color-accent-hover: #a08161;
+}
+@theme {
+  --background-image-hero_overlay: url("/assets/hero/hero-overlay.png");
+  --background-image-opening_hours: url("/assets/opening-hours/bg.png");
+  --background-image-footer: url("/assets/footer/bg.png");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply font-secondary text-secondary leading-relaxed;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .container {
+    padding: 15px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply text-primary font-primary;
+  }
+  .h1 {
+    @apply text-[70px] xl:text-[150px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[56px] xl:text-[80px] leading-[1.2] font-bold;
+  }
+  .lead {
+    @apply text-lg;
+  }
+  .btn {
+    @apply min-w-[156px] h-[54px] px-6 bg-accent hover:bg-accent-hover text-primary text-[13px] uppercase font-semibold tracking-[.15em] transition-all;
+  }
+  button {
+    cursor: pointer;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply h-8! text-primary!;
+  }
 }
