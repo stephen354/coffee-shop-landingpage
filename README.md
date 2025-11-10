@@ -23,18 +23,6 @@ Tailwind PostCSS Plugin – Optimisasi Tailwind CSS otomatis.
 
 ESLint Config Next – Konfigurasi lint khusus untuk proyek Next.js.
 
-## 🧱 Struktur Folder (Umum)
-
-```bash
-project/
-├── app/ # App Router Next.js (v16)
-├── components/ # Reusable UI components
-├── public/ # Assets (images, icons, fonts)
-├── styles/ # Global styles / Tailwind config
-├── package.json # Dependencies & scripts
-└── tailwind.config.js # Custom Tailwind setup (theme, colors, bg images)
-```
-
 ## 🛠️ Instalasi
 
 Install dependencies:
